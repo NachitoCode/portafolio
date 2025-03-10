@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/logotipo.png" />
   <link rel="stylesheet" href="css/skins/color-1.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -33,6 +34,25 @@
     .text-minusculas {
       text-transform: lowercase;
     }
+
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
   </style>
 
 </head>
@@ -44,13 +64,7 @@
   <main class="main-container">
     <!-- ======== Aside start ===== -->
     <aside class="aside">
-      <svg style="position: absolute;
-bottom: 400px;
--moz-transform: rotate(-10deg);
--o-transform: rotate(-10deg);
--webkit-transform: rotate(-10deg);
-transform: rotate(-90deg);
-bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
         xmlns:svgjs="http://svgjs.com/svgjs" width="300" height="270" preserveAspectRatio="none" viewBox="0 0 300 270">
         <g mask="url(&quot;#SvgjsMask1466&quot;)" fill="none">
           <g mask="url(&quot;#SvgjsMask1468&quot;)">
@@ -111,6 +125,17 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
         <li><a href="#services"><i class="fa fa-list"></i>Servicios</a></li>
         <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portafolio</a></li>
         <li><a href="#contact"><i class="fa fa-comments"></i>Contacto</a></li>
+        <div style="display: flex; justify-content: space-between;">
+          <!-- <p>Sigueme en:</p>
+          <div class=""> -->
+          <!-- <a href="#" style="font-size: 20px; color: red;"><i class="fab fa-youtube"></i></a>
+          <a href="#" style="font-size: 20px; color: blue;"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="font-size: 20px; color: purple;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="font-size: 20px; color: black;"><i class="fab fa-github"></i></a>
+          <a href="#" style="font-size: 20px; color: green;"><i class="fas fa-share-alt"></i></a> -->
+
+          <!-- </div> -->
+        </div>
       </ul>
     </aside>
     <!-- ======== Aside end ===== -->
@@ -118,13 +143,13 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
     <div class="main-content">
       <!-- ======== Home section start ===== -->
       <section class="home active section animate__animated" id="home">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: absolute; bottom: 0;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="var(--bg-black-100)" fill-opacity="1"
             d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
           </path>
         </svg>
         <div class="container padd-30">
-          <div class="row mar-t40 ejmeploss">
+          <div class="row mar-t40 ele-reverse">
             <div class="home-info padd-15">
               <h3 class="hello">¡Hola! mi nombre es <span class="name">Ignacio</span></h3>
               <h3 class="my-profession">Soy un <span class="typing">Desarrollador web</span></h3>
@@ -135,7 +160,7 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
             </div>
             <div class="home-img padd-15">
               <img src="img/photo.png" alt="Photo">
-              <div class="fancy-border-radius"></div>
+              <div class="fancy-border-radius floating"></div>
             </div>
           </div>
         </div>
@@ -156,34 +181,32 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                   <h3>Soy Ignacio y <span>Desarrollador web</span></h3>
                   <p>Soy Ingeniero en Tecnologías de la Información y Comunicación, apasionado por el desarrollo de
                     sitios web desde el inicio de mi formación profesional me atraen los desafíos, ya que considero que
-                    son fundamentales
-                    para el crecimiento personal y profesional. Soy un ávido estudiante y autodidacta por naturaleza,
-                    siempre buscando
-                    aprender y mejorar mis habilidades. Mi obsesión por el orden y la limpieza se refleja en mi trabajo,
-                    y mi disciplina es la
-                    base de mi alto rendimiento en cualquier tarea que emprendo.</p>
+                    son fundamentales para el crecimiento personal y profesional. Soy un ávido estudiante y autodidacta
+                    por naturaleza, siempre buscando aprender y mejorar mis habilidades. Mi obsesión por el orden y la
+                    limpieza se refleja en mi trabajo, y mi disciplina es la base de mi alto rendimiento en cualquier
+                    tarea que emprendo.</p>
                 </div>
               </div>
               <div class="row">
                 <div class="personal-info padd-15">
                   <div class="row">
                     <div class="info-item padd-15">
-                      <p>Fecha de nacimiento:<br><span>02 mayo 1996</span></p>
+                      <p>Año de nacimiento:<br><span> 1996</span></p>
                     </div>
                     <div class="info-item padd-15">
                       <p>Edad:<br><span>28</span></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Sitio web:<br><span>https://www.nachitocode.com</span></p>
+                      <p>Sitio web:<br><span style="word-wrap: break-word;">https://www.nachitocode.com</span></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Email:<br><span>nachitocode@gmail.com</span></p>
+                      <p>Email:<br><span style="word-wrap: break-word;">nachitocode@gmail.com</span></p>
                     </div>
                     <div class="info-item padd-15">
                       <p>Grado:<br><span>Ingeniero</span></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Teléfono:<br><span>722 420 4717</span></p>
+                      <p>Teléfono:<br><span>722 687 1927</span></p>
                     </div>
                     <div class="info-item padd-15">
                       <p>Ciudad:<br><span>Toluca, Estado de México</span></p>
@@ -210,8 +233,8 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                     <div class="skill-item padd-15">
                       <h5>PHP</h5>
                       <div class="progress">
-                        <div class="progress-in" style="width: 70%;"></div>
-                        <div class="skill-porcent">85%</div>
+                        <div class="progress-in" style="width: 87%;"></div>
+                        <div class="skill-porcent">87%</div>
                       </div>
                     </div>
                     <div class="skill-item padd-15">
@@ -295,7 +318,7 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                             <i class="fa fa-calendar"></i> 2021 - 2024
                           </h3>
                           <h4 class="timeline-title">Digital Builders</h4>
-                          <p class="timeline-text">Tiempo: 3 años 2 meses. <br>
+                          <p class="timeline-text">Tiempo: 4 años 2 meses. <br>
                             Área: Sistemas Informáticos. <br>
                             Cargo: Desarrollador web PHP. <br>
                             Proyectos: Landing pages, portales, tienda online y sistema de puntos.</p>
@@ -355,9 +378,8 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                 </div>
                 <h4>Desarrollo de Sitios Web Personalizados</h4>
                 <p>Creación de sitios web a medida que se adaptan a las necesidades específicas de tu negocio o
-                  proyecto. Desde sitios web
-                  corporativos hasta plataformas de comercio electrónico, garantizando una experiencia de usuario
-                  excepcion.</p>
+                  proyecto. Desde sitios web corporativos hasta plataformas de comercio electrónico, garantizando una
+                  experiencia de usuario excepcion.</p>
               </div>
             </div>
             <div class="service-item padd-15">
@@ -367,10 +389,8 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                 </div>
                 <h4>Integración y Consumo de APIs</h4>
                 <p>Implementación de APIs para ampliar la funcionalidad de tu sitio web, permitiendo la interacción con
-                  servicios externos
-                  como pagos en línea, redes sociales, mapas, entre otros. Consumo eficiente de datos para mejorar la
-                  experiencia del
-                  usuario.</p>
+                  servicios externos como pagos en línea, redes sociales, mapas, entre otros. Consumo eficiente de datos
+                  para mejorar la experiencia del usuario.</p>
               </div>
             </div>
             <div class="service-item padd-15">
@@ -380,9 +400,8 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                 </div>
                 <h4>Diseño Responsivo y Atractivo</h4>
                 <p>Diseño de interfaces web modernas y atractivas que se adaptan perfectamente a cualquier dispositivo,
-                  desde computadoras
-                  de escritorio hasta smartphones y tabletas. Enfoque en la usabilidad y la estética para captar la
-                  atención del usuario.</p>
+                  desde computadoras de escritorio hasta smartphones y tabletas. Enfoque en la usabilidad y la estética
+                  para captar la atención del usuario.</p>
               </div>
             </div>
             <div class="service-item padd-15">
@@ -392,10 +411,8 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                 </div>
                 <h4>Optimización para Motores de Búsqueda (SEO)</h4>
                 <p>Mejora de la visibilidad de tu sitio web en los motores de búsqueda mediante la implementación de
-                  estrategias de SEO
-                  efectivas. Desde la optimización técnica hasta la creación de contenido relevante, trabajamos para
-                  mejorar tu
-                  posicionamiento en Google y otros buscadores.</p>
+                  estrategias de SEO efectivas. Desde la optimización técnica hasta la creación de contenido relevante,
+                  trabajamos para mejorar tu posicionamiento en Google y otros buscadores.</p>
               </div>
             </div>
             <div class="service-item padd-15">
@@ -405,8 +422,7 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                 </div>
                 <h4>Migración y Actualización de Sitios Web</h4>
                 <p>Transferencia de sitios web a nuevas plataformas o tecnologías, asegurando una transición sin
-                  problemas y una
-                  actualización a las últimas características y estándares de la web.</p>
+                  problemas y una actualización a las últimas características y estándares de la web.</p>
               </div>
             </div>
             <div class="service-item padd-15">
@@ -416,10 +432,8 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                 </div>
                 <h4>Gestión y Mantenimiento Continuo del Sitio Web</h4>
                 <p>Ofrecimiento de servicios de gestión y mantenimiento regular para garantizar que tu sitio web esté
-                  siempre actualizado,
-                  seguro y funcionando sin problemas, incluyendo copias de seguridad regulares, actualizaciones de
-                  software y monitoreo de
-                  seguridad.</p>
+                  siempre actualizado, seguro y funcionando sin problemas, incluyendo copias de seguridad regulares,
+                  actualizaciones de software y monitoreo de seguridad.</p>
               </div>
             </div>
             <!-- ======== Service item end ===== -->
@@ -452,13 +466,17 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                     <i class="fas fa-arrow-right portfolio_button-icon"></i>
                   </span>
                   <div class="portfolio_item-details">
-                    <h3 class="details_title">Titulo 1</h3>
-                    <p class="details_description">Descripcion 1</p>
+                    <h3 class="details_title">Multiherrajes y Soluciones</h3>
+                    <p class="details_description">Se creo un ecommerce para vender en linea totalmente administrable
+                    </p>
                     <ul class="details_info">
-                      <li>Created - <span>4 dec 2020</span></li>
-                      <li>Tecnologies - <span>Html css php</span></li>
-                      <li>Role - <span>Fontend</span></li>
-                      <li>View - <span><a href="#">www.glasscity.com</a></span></li>
+                      <li>Creado - <span>5 jun 2023</span></li>
+                      <li>Tecnologías - <span>Html, bootstrap 4, php 8, api (mailboxes), AdminLTE v3.1.0, plugins,
+                          etc.</span></li>
+                      <li>Rol - <span>Fontend y Backend</span></li>
+                      <li>Demo - <span><a
+                            href="https://www.multiherrajesysoluciones.com">https://www.multiherrajesysoluciones.com</a></span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -473,13 +491,15 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
                     <i class="fas fa-arrow-right portfolio_button-icon"></i>
                   </span>
                   <div class="portfolio_item-details">
-                    <h3 class="details_title">Titulo 2</h3>
-                    <p class="details_description">Descripcion 2</p>
+                    <h3 class="details_title">MNG Constructora</h3>
+                    <p class="details_description">Se crea un cms para administrar la Landing Page</p>
                     <ul class="details_info">
-                      <li>Created - <span>4 dec 202022222</span></li>
-                      <li>Tecnologies - <span>Html css php 2</span></li>
-                      <li>Role - <span>Fontend2</span></li>
-                      <li>View - <span><a href="#">www.glasscity.com2</a></span></li>
+                      <li>Creado - <span> 03 may 2022</span></li>
+                      <li>Tecnologías - <span>Html, css y php 7.4</span></li>
+                      <li>Rol - <span>Fontend y Backend</span></li>
+                      <li>Demo - <span><a
+                            href="https://www.mngconstructora.com/inicio/">https://www.mngconstructora.com/inicio</a></span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -488,19 +508,23 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
             <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-card">
-                  <img src="img/multipuntos.PNG" alt="" class="portfolio-img">
+                  <img src="img/multipuntos-admin.png" alt="" class="portfolio-img">
                   <h3 class="portfolio_title">Sistema de puntos</h3>
                   <span class="portfolio_button"> Demo
                     <i class="fas fa-arrow-right portfolio_button-icon"></i>
                   </span>
                   <div class="portfolio_item-details">
-                    <h3 class="details_title">Titulo 1</h3>
-                    <p class="details_description">Descripcion 1</p>
+                    <h3 class="details_title">Sistema de puntos</h3>
+                    <p class="details_description">Se crea el modulo de caja, cliente y el panel de administración para
+                      la generación de puntos en sus compras de los clientes por sucursal de Multiherrajes y Soluciones.
+                    </p>
                     <ul class="details_info">
-                      <li>Created - <span>4 dec 2020</span></li>
-                      <li>Tecnologies - <span>Html css php</span></li>
-                      <li>Role - <span>Fontend</span></li>
-                      <li>View - <span><a href="#">www.glasscity.com</a></span></li>
+                      <li>Creado - <span>10 oct 2024</span></li>
+                      <li>Tecnologías - <span>Html, Bootstrap 4, AdminLTE v3.1.0 y php 7.4</span></li>
+                      <li>Rol - <span>Fontend y Backend</span></li>
+                      <li>View - <span><a
+                            href="https://www.multiherrajesysoluciones.com/multipuntos/login">https://www.multiherrajesysoluciones.com/multipuntos/login</a></span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -510,18 +534,19 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-card">
                   <img src="img/jardinstella.PNG" alt="" class="portfolio-img">
-                  <h3 class="portfolio_title">Sitio web</h3>
+                  <h3 class="portfolio_title">Landing page</h3>
                   <span class="portfolio_button"> Demo
                     <i class="fas fa-arrow-right portfolio_button-icon"></i>
                   </span>
                   <div class="portfolio_item-details">
-                    <h3 class="details_title">Titulo 1</h3>
-                    <p class="details_description">Descripcion 1</p>
+                    <h3 class="details_title">Jardín Stella</h3>
+                    <p class="details_description">Se creo una landing page optimizada y con metricas de google
+                      analitycs. </p>
                     <ul class="details_info">
-                      <li>Created - <span>4 dec 2020</span></li>
-                      <li>Tecnologies - <span>Html css php</span></li>
-                      <li>Role - <span>Fontend</span></li>
-                      <li>View - <span><a href="#">www.glasscity.com</a></span></li>
+                      <li>Created - <span>4 dec 2022</span></li>
+                      <li>Tecnologías - <span>Html5, Css3 boostrasp 5</span></li>
+                      <li>Rol - <span>Fontend</span></li>
+                      <li>Demo - <span><a href="https://jardinstella.com">https://jardinstella.com</a></span></li>
                     </ul>
                   </div>
                 </div>
@@ -531,18 +556,19 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-card">
                   <img src="img/glasscityportal.PNG" alt="" class="portfolio-img">
-                  <h3 class="portfolio_title">Portal Glass City</h3>
+                  <h3 class="portfolio_title">Portal de sitios</h3>
                   <span class="portfolio_button"> Demo
                     <i class="fas fa-arrow-right portfolio_button-icon"></i>
                   </span>
                   <div class="portfolio_item-details">
-                    <h3 class="details_title">Titulo 1</h3>
-                    <p class="details_description">Descripcion 1</p>
+                    <h3 class="details_title">Glass City</h3>
+                    <p class="details_description">Se crea un portal para la redireción a plataformas especificas, asi
+                      mismo una landing page</p>
                     <ul class="details_info">
-                      <li>Created - <span>4 dec 2020</span></li>
-                      <li>Tecnologies - <span>Html css php</span></li>
-                      <li>Role - <span>Fontend</span></li>
-                      <li>View - <span><a href="#">www.glasscity.com</a></span></li>
+                      <li>Creado - <span>10 jul 2021</span></li>
+                      <li>Tecnologías - <span>Html3 Css3, php 7.3</span></li>
+                      <li>Rol - <span>Fontend</span></li>
+                      <li>Demo - <span><a href="#">www.glasscity.com</a></span></li>
                     </ul>
                   </div>
                 </div>
@@ -551,19 +577,21 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
             <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-card">
-                  <img src="img/anuncios.PNG" alt="" class="portfolio-img">
-                  <h3 class="portfolio_title">Pago de servicios</h3>
+                  <img src="img/anuncios-atizapan.png" alt="" class="portfolio-img">
+                  <h3 class="portfolio_title">Pago de anuncios publicitarios</h3>
                   <span class="portfolio_button"> Demo
                     <i class="fas fa-arrow-right portfolio_button-icon"></i>
                   </span>
                   <div class="portfolio_item-details">
-                    <h3 class="details_title">Titulo 1</h3>
-                    <p class="details_description">Descripcion 1</p>
+                    <h3 class="details_title">Tesorería de Atizapan de Zaragoza</h3>
+                    <p class="details_description">Se diseña y se validan los datos del lado del cliente</p>
                     <ul class="details_info">
-                      <li>Created - <span>4 dec 2020</span></li>
-                      <li>Tecnologies - <span>Html css php</span></li>
-                      <li>Role - <span>Fontend</span></li>
-                      <li>View - <span><a href="#">www.glasscity.com</a></span></li>
+                      <li>Creado - <span>14 nov 2019</span></li>
+                      <li>Tecnologías - <span>Html5, Bootstrap v3.4.1, C# Y Javascipt</span></li>
+                      <li>Rol - <span>Fontend</span></li>
+                      <li>Demo - <span><a
+                            href="https://tesoreriadigitalat.com:444/Menu.aspx">https://tesoreriadigitalat.com:444/Menu.aspx</a></span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -587,10 +615,10 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
           <div class="row">
             <!-- ======== Contact info item start ===== -->
             <div class="contact-info-item padd-15">
-              <a href="tel:7224204717" class="icon">
+              <a href="tel:7226871927" class="icon">
                 <i class="fa fa-phone"></i>
                 <h4>Llámame al</h4>
-                <p>+52 7224204717</p>
+                <p>+52 7226871927</p>
               </a>
             </div>
             <!-- <div class="contact-info-item padd-15">
@@ -717,7 +745,7 @@ bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:
           <img src="img/work-2.webp" alt="" class="portfolio_popup-img">
         </div>
         <div class="portfolio_popup-info">
-          <div class="portfolio_popup-subtitle">Featured - <span>Design</span></div>
+          <div class="portfolio_popup-subtitle">Presentación - <span>Design</span></div>
           <div class="portfolio_popup-body">
             <h3 class="details_title">App for tecnology & services </h3>
             <p class="details_description"> Lorem ipsum , dolor sit amet consectetur

@@ -6,7 +6,8 @@ const _ = (eleId) => d.querySelector(`${eleId}`),
 
 // typing animation 
 var typed = new Typed(".typing", {
-  strings: ["Web Designer", "Web Developer", "Graphic Designer", "Youtuber"],
+  strings: ["Web Designer", "Web Developer", "Graphic Designer"],
+  // strings: ["Web Designer", "Web Developer", "Graphic Designer", "Youtuber"],
   typeSpeed: 100,
   BackSpeed: 60,
   loop: true
@@ -142,15 +143,15 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 });
 
 function validateForm() {
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-  let subject = document.getElementById('subject').value;
-  let message = document.getElementById('message').value;
-
-  let nameError = document.getElementById('name-error');
-  let emailError = document.getElementById('email-error');
-  let subjectError = document.getElementById('subject-error');
-  let messageError = document.getElementById('message-error');
+  let name = document.getElementById('name').value,
+    email = document.getElementById('email').value,
+    subject = document.getElementById('subject').value,
+    message = document.getElementById('message').value,
+    ///////////////////////////////////////////////
+    nameError = document.getElementById('name-error'),
+    emailError = document.getElementById('email-error'),
+    subjectError = document.getElementById('subject-error'),
+    messageError = document.getElementById('message-error');
 
   clearErrors([nameError, emailError, subjectError, messageError]);
 
